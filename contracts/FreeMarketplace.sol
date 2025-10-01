@@ -33,8 +33,14 @@ contract FreelanceMarketplace is ERC721 {
     function submitModule(uint256 moduleId, string memory ipfsHash) external {
         Module storage m = modules[moduleId];
         require(msg.sender == m.freelancer, "Only assigned freelancer can submit");
-        require(m.submitted && !m.paid, "Module not submitted or already paid");
+        m.ipfsHash = ipfsHash;
+        m.submitted = true;
+    }
 
+    function approveModule(uint256 moduleId, uint256 paymentAmount) external {
+        Module storage m = modules[moduleId];
+        require(msg.sender == m.client, "Only client can approve");
+        require(m.submitted && !m.paid, "Module not submitted or already paid");
         token.transfer(m.freelancer, paymentAmount);
         m.paid = true;
     }
