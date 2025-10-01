@@ -1,0 +1,27 @@
+{
+  "name": "blocklance",
+  "version": "1.0.0",
+  "description": "4th Year Major Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRookiexe/BlockLance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRookiexe/BlockLance/issues"
+  },
+  "homepage": "https://github.com/TheRookiexe/BlockLance#readme",
+  "devDependencies": {
+    "hardhat": "^3.0.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "ethers": "^6.15.0"
+  }
+}
