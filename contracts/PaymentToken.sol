@@ -5,6 +5,6 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract PaymentToken is ERC20 {
     constructor(uint256 initialsupply) ERC20("FreelanceToken", "FLT") {
-        _mint(msg.sender, initialSupply);
+        _mint(msg.sender, initialsupply);
     }
 }
