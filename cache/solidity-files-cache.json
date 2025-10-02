@@ -669,8 +669,8 @@
       ]
     },
     "/home/rookiexe/repos/BlockLance/contracts/FreelanceMarketplace.sol": {
-      "lastModificationDate": 1759340313167,
-      "contentHash": "0ffe29c8348223ee33fbd750b017e84a",
+      "lastModificationDate": 1759419880399,
+      "contentHash": "ba6c2b135e298c2f08a7ca3ffd6deb64",
       "sourceName": "contracts/FreelanceMarketplace.sol",
       "solcConfig": {
         "version": "0.8.20",
