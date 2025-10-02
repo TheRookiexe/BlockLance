@@ -1,3 +1,23 @@
+(await token.balanceOf(freelancer.address)).toString();
+(await token.balanceOf(client.address)).toString();
+(await token.blanceOf(client.address)).toString();
+await Marketplace.modules(1);
+await Marketplace.connect(client).approveModule(1, 500);
+await token.connect(client).approve(Marketplace.address, 500);
+await Marketplace.modules(1);
+await Marketplace.connect(freelancer).submitModule(1, "0xabe91b803c3b63b63148ba567452e20695146f89fc1dea07bcb4862662659ca8");
+await Marketplace.modules(1);
+await Marketplace.module(1);
+await Marketplace.connect(client).addModule(freelancer.address);
+(await token.balanceOf(freelancer.address)).toString();
+(await token.balanceOf(client.address)).toString();
+(await token.balanceof(client.address)).toString();
+()
+const Marketplace = await ethers.getContractAt("FreelanceMarketplace","0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512");
+const marketplace = await ethers.getContractAt("FreelanceMarketplace","0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512");
+const marketplace = await ethers.getContractAt("Marketplace","0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512");
+const token = await ethers.getContractAt("PaymentToken", "0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const [client, freelancer] = await ethers.getSigners();
 (await token.totalSupply()).toString()
 (await token.totalSuppy()).toString()
 const token = await ethers.getContractAt("PaymentToken", "0x5FbDB2315678afecb367f032d93F642f64180aa3");
