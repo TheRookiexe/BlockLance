@@ -631,45 +631,8 @@
         "IERC20Metadata"
       ]
     },
-    "/home/rookiexe/repos/BlockLance/contracts/PaymentToken.sol": {
-      "lastModificationDate": 1759338258611,
-      "contentHash": "ad9b447f4a3c674b608dc6445ba330a1",
-      "sourceName": "contracts/PaymentToken.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "PaymentToken"
-      ]
-    },
     "/home/rookiexe/repos/BlockLance/contracts/FreelanceMarketplace.sol": {
-      "lastModificationDate": 1759419880399,
+      "lastModificationDate": 1759504654187,
       "contentHash": "ba6c2b135e298c2f08a7ca3ffd6deb64",
       "sourceName": "contracts/FreelanceMarketplace.sol",
       "solcConfig": {
@@ -704,6 +667,43 @@
       ],
       "artifacts": [
         "FreelanceMarketplace"
+      ]
+    },
+    "/home/rookiexe/repos/BlockLance/contracts/PaymentToken.sol": {
+      "lastModificationDate": 1759504654187,
+      "contentHash": "ad9b447f4a3c674b608dc6445ba330a1",
+      "sourceName": "contracts/PaymentToken.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "PaymentToken"
       ]
     }
   }
