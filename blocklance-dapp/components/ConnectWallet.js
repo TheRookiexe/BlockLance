@@ -64,25 +64,36 @@ export default function ConnectWallet() {
     setJobs(jobList);
   }
 
-  async function postJob() {
-    if (!jobDescription || !jobPayment) {
-      alert("Fill in job description and payment.");
-      return;
-    }
-
-    try {
-      const paymentAmount = ethers.utils.parseUnits(jobPayment, 18);
-      await tokenContract.approve(marketplaceAddress, paymentAmount);
-      const tx = await marketplaceContract.postJob(jobDescription, paymentAmount);
-      await tx.wait();
-
-      setJobDescription("");
-      setJobPayment("");
-      await fetchJobs(marketplaceContract);
-    } catch (err) {
-      console.error("Post job error:", err);
-    }
+async function postJob() {
+  if (!tokenContract || !marketplaceContract) {
+    alert("Please connect your wallet first.");
+    return;
   }
+
+  if (!jobDescription || !jobPayment) {
+    alert("Fill in job description and payment.");
+    return;
+  }
+
+  try {
+    const paymentAmount = ethers.utils.parseUnits(jobPayment, 18);
+
+    const approveTx = await tokenContract.approve(marketplaceAddress, paymentAmount);
+    await approveTx.wait();
+
+    const tx = await marketplaceContract.postJob(jobDescription, paymentAmount);
+    await tx.wait();
+
+    alert("Job posted!");
+    setJobDescription("");
+    setJobPayment("");
+
+    await fetchJobs(marketplaceContract);
+  } catch (err) {
+    console.error("Post job error:", err);
+  }
+}
+
 
   async function claimJob(jobId) {
     try {
